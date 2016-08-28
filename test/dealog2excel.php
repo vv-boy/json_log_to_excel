@@ -33,15 +33,14 @@ $row = 2; // 从第二行开始写了。
 while (!feof($fp)) {
 	$clickInfo = fgets($fp);
 	if (!empty(trim($clickInfo))){
-		$clickArr = json_decode($clickInfo, true);
-		$i = 0;
+		$clickArr = array_values(json_decode($clickInfo, true));
 		foreach ($clickArr as $key => $info) {
 
-			$activeExcel->setCellValue(chr($i + 65) . strval($row), $info);
-			$i++;
+			$activeExcel->setCellValue(chr($key + 65) . strval($row), $info);
 		}
+		// 写下一行。
+		$row ++;	
 	}
-	$row ++;	
 }
 
 fclose($fp);
