@@ -1,0 +1,7 @@
+<?php
+
+$clickInfo = '2016-08-01T00:03:30+08:00	cdm_kpopwlpaper_th mobisummer	{"timestamp":1469980847696,"campaign_id":"486821","channel_id":"2573","orig_campaign_id":0,"ua":"Mozilla/5.0 (Linux; Android 5.1; X9009 Build/LMY47I) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Mobile Safari/537.36 OPR/34.0.2044.101442","referer":"http://clickadu.com/?zoneid=370312&pbk2=5ce2dcb3f3dd87040f29bf17317c012d6313519566268768663&r=%2Foc%2Fhan%2Ftomb&uuid=bb244eb4-dfbd-4af6-afaf-fb249eadefbe","subid":"2153","country":"th","ip":"182.232.43.169","forward_ip":"182.232.43.169","query":{"transaction_id":"1023217f282cca50b9d3fbdd56ab10","offer_id":"20241","sub_id":"ho"},"mode":"clickid","clickid":"579e20af76ff2bcf41e21973","devid":"","options":{"redirected":0},"price_info":{"adv":0.85,"chn":0.77,"chn_mode":"cpa"},"cookie":[{"campaign":"cdm_kpopwlpaper_th","channel":"mobisummer","clickid":"579e20af76ff2bcf41e21973"}],"cookie_id":"579e20af76ff2bcf41e21974","restriction":0,"async_click_flag":false,"inject_coded":false,"deliver_ip":"54.169.156.144","referer_host":"clickadu.com","ua_detail":{"device":"X9009","os":"Android 5.1.0","ua":"Opera Mobile 34.0.2044"},"host_id":"14","offline_realtime":true,"offline_request_id":"579e20b04b36e7a91da78863","offline_log_level":"info"}';
+
+
+preg_match('/"clickid":"(.*?)"/', $clickInfo, $match);
+var_dump($match[1]);
